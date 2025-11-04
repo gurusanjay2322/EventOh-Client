@@ -17,7 +17,7 @@ export default function VendorsList() {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/vendors`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/vendors`);
         const data = await res.json();
         setVendors(data.vendors || []);
       } catch (err) {
